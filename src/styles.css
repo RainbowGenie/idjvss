@@ -1,0 +1,27 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+
+.section {
+  padding: 2em 0;
+  display: flex;
+  min-height: 65vh;
+  align-items: center;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 42rem;
+  width: 85%;
+}
+
+.qrcode__container {
+  display: flex;
+  align-items: center;
+}
+
+.input__group {
+  margin-left: 3em;
+}
