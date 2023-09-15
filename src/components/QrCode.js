@@ -35,8 +35,12 @@ const QrCode = () => {
 		/>
 	);
 	useEffect(() => {
-		const newSocket = io.connect('https://fhdlocal.com:9000');
+		const newSocket = io('https://fhdlocal.com');
 		setSocket(newSocket);
+
+		newSocket.on('connect', () => {
+			console.log('Connected to server');
+		});
 
 		newSocket.on('get_qrdata', (qrdata) => {
 			console.log('connected socketId is ---', newSocket.id);
